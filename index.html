@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Larishop's — Salon de Beauté & Bien-être</title>
+<title>Larissa Laporte — Salon de Beauté & LariShop's</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -15,6 +15,7 @@
   a{text-decoration:none;color:inherit}
   img{max-width:100%;display:block}
   .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
   nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);padding:18px 0;transition:all .3s ease;box-shadow:0 2px 20px rgba(0,0,0,0.05)}
   nav .container{display:flex;justify-content:space-between;align-items:center}
   .logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--noir)}
@@ -27,6 +28,7 @@
   .btn-rdv{background:var(--noir);color:var(--blanc);padding:10px 24px;border-radius:30px;font-size:.9rem;font-weight:500;transition:all .3s}
   .btn-rdv:hover{background:var(--or);transform:translateY(-2px)}
   .burger{display:none;font-size:1.5rem;cursor:pointer;background:none;border:none}
+
   .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.45)),url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1600') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--blanc);padding:0 24px}
   .hero-content{max-width:800px;animation:fadeUp 1.2s ease}
   .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;margin-bottom:20px;font-weight:700}
@@ -39,11 +41,13 @@
   .btn-outline{background:transparent;color:var(--blanc);border:2px solid var(--blanc)}
   .btn-outline:hover{background:var(--blanc);color:var(--noir)}
   @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
   section{padding:100px 0}
   .section-title{text-align:center;margin-bottom:60px}
   .section-title small{color:var(--or);letter-spacing:3px;text-transform:uppercase;font-size:.85rem;font-weight:500}
   .section-title h2{font-size:clamp(2rem,4vw,3rem);margin-top:10px}
   .section-title .line{width:60px;height:2px;background:var(--or);margin:20px auto}
+
   .about{background:var(--blanc)}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   .about-img{position:relative;border-radius:8px;overflow:hidden;box-shadow:var(--ombre)}
@@ -55,6 +59,7 @@
   .about-stats{display:flex;gap:40px;margin-top:35px}
   .stat h3{font-size:2.5rem;color:var(--or)}
   .stat p{font-size:.9rem;color:var(--gris);margin:0}
+
   .services{background:var(--creme)}
   .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
   .service-card{background:var(--blanc);border-radius:12px;overflow:hidden;box-shadow:var(--ombre);transition:all .4s ease;cursor:pointer}
@@ -68,6 +73,7 @@
   .service-body h3{font-size:1.4rem;margin-bottom:10px}
   .service-body p{color:var(--gris);font-size:.92rem;margin-bottom:15px}
   .service-price{display:inline-block;color:var(--or);font-weight:600;font-size:.95rem}
+
   .pricing{background:var(--blanc)}
   .tabs{display:flex;justify-content:center;gap:10px;margin-bottom:50px;flex-wrap:wrap}
   .tab{padding:10px 24px;border-radius:30px;background:transparent;border:1px solid var(--rose-fonce);cursor:pointer;font-size:.9rem;font-weight:500;transition:all .3s}
@@ -79,18 +85,34 @@
   .price-item-info h4{font-size:1.15rem;margin-bottom:4px}
   .price-item-info p{color:var(--gris);font-size:.88rem}
   .price-item-price{color:var(--or);font-weight:600;font-size:1.15rem;font-family:'Playfair Display',serif;white-space:nowrap;margin-left:20px}
-  .products{background:var(--creme)}
-  .products-intro{text-align:center;max-width:700px;margin:0 auto 50px;color:var(--gris)}
+
+  /* BOUTIQUE LARISHOP'S */
+  .products{background:var(--creme);position:relative}
+  .products.alt{background:var(--blanc)}
+  .products-intro{text-align:center;max-width:750px;margin:0 auto 30px;color:var(--gris)}
+  .shop-banner{
+    background:linear-gradient(135deg,var(--or) 0%,#b8944d 100%);
+    color:var(--blanc);padding:25px;border-radius:12px;
+    text-align:center;margin-bottom:50px;
+    display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;
+    box-shadow:0 10px 30px rgba(201,169,97,0.3);
+  }
+  .shop-banner i{font-size:2rem}
+  .shop-banner h3{font-size:1.6rem;margin:0;font-family:'Playfair Display',serif}
+  .shop-banner p{margin:0;font-size:.95rem;opacity:.95}
+  .shop-banner .shop-name{font-style:italic;font-weight:700;color:var(--creme)}
+
   .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
   .product-card{background:var(--blanc);border-radius:12px;overflow:hidden;box-shadow:var(--ombre);transition:all .3s;position:relative;display:flex;flex-direction:column}
-  .product-card:hover{transform:translateY(-8px)}
+  .product-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.12)}
   .product-badge{position:absolute;top:15px;left:15px;background:var(--or);color:var(--blanc);padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:500;z-index:2}
   .product-badge.pro{background:var(--noir)}
   .product-badge.new{background:#6ba368}
   .product-badge.bio{background:#8b7355}
-  .product-img{height:240px;overflow:hidden;background:#f5f5f5}
-  .product-img img{height:100%;width:100%;object-fit:cover;transition:transform .4s}
-  .product-card:hover .product-img img{transform:scale(1.05)}
+  .product-img{height:260px;overflow:hidden;background:#f5f5f5;position:relative}
+  .product-img img{height:100%;width:100%;object-fit:cover;transition:transform .5s}
+  .product-card:hover .product-img img{transform:scale(1.08)}
+  .product-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.15),transparent 50%);pointer-events:none}
   .product-body{padding:22px;text-align:center;flex-grow:1;display:flex;flex-direction:column}
   .product-body h4{font-size:1.05rem;margin-bottom:8px;line-height:1.3}
   .product-body .category{color:var(--or);font-size:.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:500}
@@ -98,8 +120,13 @@
   .stars{color:var(--or);font-size:.85rem;margin:8px 0}
   .product-price{font-size:1.25rem;font-weight:600;color:var(--noir);font-family:'Playfair Display',serif;margin:10px 0 15px}
   .product-price .range{color:var(--or)}
-  .btn-cart{width:100%;padding:10px;background:var(--noir);color:var(--blanc);border:none;border-radius:30px;cursor:pointer;font-size:.85rem;font-weight:500;transition:all .3s;margin-top:auto}
-  .btn-cart:hover{background:var(--or)}
+  .product-availability{
+    display:inline-block;background:var(--creme);color:var(--noir);
+    padding:6px 14px;border-radius:20px;font-size:.78rem;font-weight:500;
+    margin-top:auto;border:1px solid var(--rose);
+  }
+  .product-availability i{color:var(--or);margin-right:6px}
+
   .gallery{background:var(--blanc)}
   .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:200px 200px;gap:15px}
   .gallery-item{overflow:hidden;border-radius:8px;cursor:pointer;position:relative}
@@ -109,6 +136,7 @@
   .gallery-item:hover::after{opacity:1}
   .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
   .gallery-item:nth-child(4){grid-column:span 2}
+
   .testimonials{background:linear-gradient(rgba(26,26,26,0.85),rgba(26,26,26,0.85)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600') center/cover fixed;color:var(--blanc)}
   .testimonials .section-title h2{color:var(--blanc)}
   .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
@@ -119,6 +147,7 @@
   .testimonial-author img{width:50px;height:50px;border-radius:50%;object-fit:cover}
   .testimonial-author h5{font-size:1rem}
   .testimonial-author small{color:var(--or-clair)}
+
   .booking{background:var(--creme)}
   .booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
   .booking-info h3{font-size:1.8rem;margin-bottom:20px}
@@ -136,6 +165,7 @@
   .form-group textarea{resize:vertical;min-height:100px}
   form button{width:100%;padding:14px;background:var(--noir);color:var(--blanc);border:none;border-radius:30px;cursor:pointer;font-size:1rem;font-weight:500;transition:all .3s}
   form button:hover{background:var(--or)}
+
   footer{background:var(--noir);color:var(--blanc);padding:70px 0 20px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
   .footer-col h4{margin-bottom:20px;font-size:1.2rem}
@@ -146,6 +176,7 @@
   .social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all .3s}
   .social a:hover{background:var(--or);transform:translateY(-3px)}
   .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;text-align:center;color:#888;font-size:.85rem}
+
   @media(max-width:900px){
     .nav-links{position:fixed;top:70px;left:0;right:0;background:var(--blanc);flex-direction:column;padding:30px;gap:20px;transform:translateY(-150%);transition:transform .3s;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
     .nav-links.open{transform:translateY(0)}
@@ -177,8 +208,7 @@
       <li><a href="#about">À propos</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
-      <li><a href="#produits-coiffure">Coiffure</a></li>
-      <li><a href="#produits-cosmetiques">Cosmétiques</a></li>
+      <li><a href="#larishop">LariShop's</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="btn-rdv">Réserver</a>
@@ -192,7 +222,7 @@
     <p>Un havre de paix dédié à votre bien-être — Soins du visage, massages, coiffure et esthétique par Larissa Laporte</p>
     <div class="hero-buttons">
       <a href="#contact" class="btn btn-primary">Prendre rendez-vous</a>
-      <a href="#tarifs" class="btn btn-outline">Voir les tarifs</a>
+      <a href="#larishop" class="btn btn-outline">Découvrir LariShop's</a>
     </div>
   </div>
 </section>
@@ -274,59 +304,309 @@
       <div class="price-item"><div class="price-item-info"><h4>Massage Relaxant</h4><p>Détente musculaire complète — 60 min</p></div><div class="price-item-price">75 €</div></div>
       <div class="price-item"><div class="price-item-info"><h4>Massage Californien</h4><p>Longs mouvements enveloppants — 75 min</p></div><div class="price-item-price">90 €</div></div>
       <div class="price-item"><div class="price-item-info"><h4>Massage aux Pierres Chaudes</h4><p>Basaltes volcaniques, détente profonde — 90 min</p></div><div class="price-item-price">110 €</div></div>
+      <div class="price-item"><div class="price-item-info"><h4>Massage aux Huiles Essentielles</h4><p>Aromathérapie personnalisée — 60 min</p></div><div class="price-item-price">85 €</div></div>
+      <div class="price-item"><div class="price-item-info"><h4>Massage Duo en Couple</h4><p>Expérience partagée en cabine double — 90 min</p></div><div class="price-item-price">180 €</div></div>
     </div>
 
     <div class="price-list" id="esthetique">
       <div class="price-item"><div class="price-item-info"><h4>Épilation Jambes Complètes</h4><p>Cire chaude professionnelle</p></div><div class="price-item-price">40 €</div></div>
       <div class="price-item"><div class="price-item-info"><h4>Manucure + Pose Vernis</h4><p>Soin des ongles et couleur</p></div><div class="price-item-price">35 €</div></div>
+      <div class="price-item"><div class="price-item-info"><h4>Pose de Gel / Résine</h4><p>Ongles parfaits longue tenue</p></div><div class="price-item-price">55 €</div></div>
       <div class="price-item"><div class="price-item-info"><h4>Extensions de Cils</h4><p>Regard intensifié — cil à cil</p></div><div class="price-item-price">90 €</div></div>
-      <div class="price-item"><div class="price-item-info"><h4>Maquillage de Soirée</h4><p>Look sophistiqué longue tenue</p></div><div class="price-item-price">85 €</div></div>
+      <div class="price-item"><div class="price-item-info"><h4>Maquillage de Jour</h4><p>Teint lumineux et naturel</p></div><div class="price-item-price">50 €</div></div>
+      <div class="price-item"><div class="price-item-info"><h4>Maquillage de Soirée / Mariée</h4><p>Look sophistiqué longue tenue</p></div><div class="price-item-price">85 €</div></div>
     </div>
   </div>
 </section>
 
-<section class="products" id="produits-coiffure">
+<!-- LARISHOP'S - PRODUITS CAPELLAIRES -->
+<section class="products" id="larishop">
   <div class="container">
+    <div class="shop-banner reveal">
+      <i class="fas fa-store"></i>
+      <div>
+        <h3>Bienvenue chez <span class="shop-name">LariShop's</span></h3>
+        <p>Notre boutique exclusive — Produits disponibles uniquement en salon</p>
+      </div>
+      <i class="fas fa-gift"></i>
+    </div>
+
     <div class="section-title reveal">
-      <small>Boutique coiffure</small>
+      <small>LariShop's — Coiffure</small>
       <h2>Nos Produits Capillaires</h2>
       <div class="line"></div>
     </div>
-    <p class="products-intro reveal">Notre gamme professionnelle de produits capillaires, sélectionnés avec soin par Larissa.</p>
+    <p class="products-intro reveal">Une gamme professionnelle sélectionnée par Larissa pour sublimer vos cheveux au quotidien. <strong>Venez découvrir ces produits directement en salon !</strong></p>
+
     <div class="products-grid">
-      <div class="product-card reveal"><span class="product-badge new">Nouveau</span><div class="product-img"><img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c22?w=500" alt="Shampooing"></div><div class="product-body"><small class="category">Nettoyage</small><h4>Shampooing Nourrissant</h4><p class="description">Nettoie en douceur tout en nourrissant la fibre.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 15 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1585232004423-244e0e6904e3?w=500" alt="Après-shampooing"></div><div class="product-body"><small class="category">Soin</small><h4>Après-Shampooing</h4><p class="description">Démêle, adoucit et apporte brillance.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 15 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge">Best-seller</span><div class="product-img"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500" alt="Masque"></div><div class="product-body"><small class="category">Soin profond</small><h4>Masque Réparateur</h4><p class="description">Répare intensément les cheveux abîmés.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">10 € – 25 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500" alt="Huile"></div><div class="product-body"><small class="category">Nutrition</small><h4>Huile Capillaire</h4><p class="description">Nourrit, fait briller et protège des agressions.</p><div class="stars">★★★★☆</div><div class="product-price"><span class="range">7 € – 20 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge">Top</span><div class="product-img"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500" alt="Sérum"></div><div class="product-body"><small class="category">Finition</small><h4>Sérum Cheveux</h4><p class="description">Anti-frizz, apporte brillance instantanée.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">10 € – 30 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500" alt="Leave-in"></div><div class="product-body"><small class="category">Sans rinçage</small><h4>Leave-in / Crème</h4><p class="description">Hydratation longue durée, sans rinçage.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 20 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge new">Nouveau</span><div class="product-img"><img src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?w=500" alt="Spray"></div><div class="product-body"><small class="category">Protection</small><h4>Spray Thermoprotecteur</h4><p class="description">Protège du lisseur et du sèche-cheveux.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">10 € – 25 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=500" alt="Gommage"></div><div class="product-body"><small class="category">Scalp</small><h4>Gommage Cuir Chevelu</h4><p class="description">Exfolie, purifie et stimule la pousse.</p><div class="stars">★★★★☆</div><div class="product-price"><span class="range">6 € – 15 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1599305445671-acb9e9f1b3a0?w=500" alt="Gel"></div><div class="product-body"><small class="category">Coiffage</small><h4>Produit Coiffant / Gel</h4><p class="description">Fixation longue tenue, effet naturel.</p><div class="stars">★★★★☆</div><div class="product-price"><span class="range">5 € – 15 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge pro">PRO</span><div class="product-img"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Soin profond"></div><div class="product-body"><small class="category">Expert</small><h4>Soin Profond Professionnel</h4><p class="description">Traitement intensif, résultats dès la 1ère application.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">20 € – 45 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
+
+      <div class="product-card reveal">
+        <span class="product-badge new">Nouveau</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c22?w=500" alt="Shampooing nourrissant"></div>
+        <div class="product-body">
+          <small class="category">Nettoyage</small>
+          <h4>Shampooing Nourrissant</h4>
+          <p class="description">Nettoie en douceur tout en nourrissant la fibre capillaire.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 15 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1585232004423-244e0e6904e3?w=500" alt="Après-shampooing"></div>
+        <div class="product-body">
+          <small class="category">Soin</small>
+          <h4>Après-Shampooing</h4>
+          <p class="description">Démêle, adoucit et apporte brillance à vos cheveux.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 15 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge">Best-seller</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500" alt="Masque réparateur"></div>
+        <div class="product-body">
+          <small class="category">Soin profond</small>
+          <h4>Masque Réparateur</h4>
+          <p class="description">Répare intensément les cheveux abîmés et secs.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">10 € – 25 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500" alt="Huile capillaire"></div>
+        <div class="product-body">
+          <small class="category">Nutrition</small>
+          <h4>Huile Capillaire</h4>
+          <p class="description">Nourrit, fait briller et protège des agressions.</p>
+          <div class="stars">★★★★☆</div>
+          <div class="product-price"><span class="range">7 € – 20 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge">Top</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500" alt="Sérum cheveux"></div>
+        <div class="product-body">
+          <small class="category">Finition</small>
+          <h4>Sérum Cheveux</h4>
+          <p class="description">Anti-frizz, apporte brillance et douceur instantanée.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">10 € – 30 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500" alt="Leave-in crème capillaire"></div>
+        <div class="product-body">
+          <small class="category">Sans rinçage</small>
+          <h4>Leave-in / Crème Capillaire</h4>
+          <p class="description">Hydratation longue durée, sans rinçage.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 20 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge new">Nouveau</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?w=500" alt="Spray thermoprotecteur"></div>
+        <div class="product-body">
+          <small class="category">Protection chaleur</small>
+          <h4>Spray Thermoprotecteur</h4>
+          <p class="description">Protège des agressions du lisseur et du sèche-cheveux.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">10 € – 25 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=500" alt="Gommage cuir chevelu"></div>
+        <div class="product-body">
+          <small class="category">Soin scalp</small>
+          <h4>Gommage du Cuir Chevelu</h4>
+          <p class="description">Exfolie, purifie et stimule la pousse des cheveux.</p>
+          <div class="stars">★★★★☆</div>
+          <div class="product-price"><span class="range">6 € – 15 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1599305445671-acb9e9f1b3a0?w=500" alt="Gel coiffant"></div>
+        <div class="product-body">
+          <small class="category">Coiffage</small>
+          <h4>Produit Coiffant / Gel</h4>
+          <p class="description">Fixation longue tenue, effet naturel ou brillant.</p>
+          <div class="stars">★★★★☆</div>
+          <div class="product-price"><span class="range">5 € – 15 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge pro">PRO</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500" alt="Soin profond professionnel"></div>
+        <div class="product-body">
+          <small class="category">Soin expert</small>
+          <h4>Soin Profond Professionnel</h4>
+          <p class="description">Traitement intensif, résultats visibles dès la 1ère application.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">20 € – 45 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="products" id="produits-cosmetiques" style="background:var(--blanc)">
+<!-- LARISHOP'S - PRODUITS COSMÉTIQUES -->
+<section class="products alt">
   <div class="container">
     <div class="section-title reveal">
-      <small>Boutique cosmétique</small>
+      <small>LariShop's — Cosmétique</small>
       <h2>Nos Produits de Beauté</h2>
       <div class="line"></div>
     </div>
-    <p class="products-intro reveal">Une sélection exclusive de soins visage et corps, formulés avec des ingrédients naturels.</p>
+    <p class="products-intro reveal">Une sélection exclusive de soins visage et corps, formulés avec des ingrédients naturels pour révéler votre éclat au quotidien. <strong>Tous nos produits sont disponibles à l'achat en salon.</strong></p>
+
     <div class="products-grid">
-      <div class="product-card reveal"><span class="product-badge bio">Naturel</span><div class="product-img"><img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=500" alt="Lait corporel"></div><div class="product-body"><small class="category">Hydratation corps</small><h4>Lait Corporel</h4><p class="description">Hydrate et adoucit la peau en profondeur.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 20 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-15562285788-c0e9b6f6e4c2?w=500" alt="Gel douche"></div><div class="product-body"><small class="category">Nettoyage corps</small><h4>Gel Douche</h4><p class="description">Nettoie en douceur avec un parfum délicat.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">5 € – 12 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge">Best-seller</span><div class="product-img"><img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=500" alt="Gommage"></div><div class="product-body"><small class="category">Exfoliation</small><h4>Gommage Corporel</h4><p class="description">Élimine les cellules mortes, révèle une peau douce.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 18 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge new">Nouveau</span><div class="product-img"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500" alt="Nettoyant visage"></div><div class="product-body"><small class="category">Nettoyage visage</small><h4>Nettoyant Visage</h4><p class="description">Élimine les impuretés sans dessécher l'épiderme.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 20 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500" alt="Crème hydratante"></div><div class="product-body"><small class="category">Hydratation visage</small><h4>Crème Hydratante Visage</h4><p class="description">Hydratation 24h pour une peau souple et éclatante.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">10 € – 30 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge pro">Premium</span><div class="product-img"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500" alt="Sérum visage"></div><div class="product-body"><small class="category">Soin ciblé</small><h4>Sérum Visage</h4><p class="description">Concentré actif anti-âge ou éclat selon vos besoins.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">15 € – 40 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=500" alt="Masque visage"></div><div class="product-body"><small class="category">Soin express</small><h4>Masque Visage</h4><p class="description">Coup d'éclat ou purification en 10 minutes.</p><div class="stars">★★★★☆</div><div class="product-price"><span class="range">5 € – 15 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><div class="product-img"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500" alt="Démaquillant"></div><div class="product-body"><small class="category">Nettoyage</small><h4>Démaquillant</h4><p class="description">Eau micellaire ou huile, respecte les yeux sensibles.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">6 € – 15 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge new">Nouveau</span><div class="product-img"><img src="https://images.unsplash.com/photo-1532947978637-0c12ac3a4e20?w=500" alt="Écran solaire"></div><div class="product-body"><small class="category">Protection</small><h4>Écran Solaire Visage</h4><p class="description">SPF 50+, texture invisible, anti-taches.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">10 € – 25 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
-      <div class="product-card reveal"><span class="product-badge bio">Naturel</span><div class="product-img"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500" alt="Huile corporelle"></div><div class="product-body"><small class="category">Nutrition corps</small><h4>Huile Corporelle</h4><p class="description">Sublime la peau et prévient les vergetures.</p><div class="stars">★★★★★</div><div class="product-price"><span class="range">8 € – 20 €</span></div><button class="btn-cart">Ajouter au panier</button></div></div>
+
+      <div class="product-card reveal">
+        <span class="product-badge bio">Naturel</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=500" alt="Lait corporel"></div>
+        <div class="product-body">
+          <small class="category">Hydratation corps</small>
+          <h4>Lait Corporel</h4>
+          <p class="description">Hydrate et adoucit la peau en profondeur, texture légère.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 20 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500" alt="Gel douche"></div>
+        <div class="product-body">
+          <small class="category">Nettoyage corps</small>
+          <h4>Gel Douche</h4>
+          <p class="description">Nettoie en douceur avec un parfum délicat, respecte le pH.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">5 € – 12 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge">Best-seller</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=500" alt="Gommage corporel"></div>
+        <div class="product-body">
+          <small class="category">Exfoliation</small>
+          <h4>Gommage Corporel</h4>
+          <p class="description">Élimine les cellules mortes, révèle une peau douce et lumineuse.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 18 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge new">Nouveau</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500" alt="Nettoyant visage"></div>
+        <div class="product-body">
+          <small class="category">Nettoyage visage</small>
+          <h4>Nettoyant Visage</h4>
+          <p class="description">Élimine les impuretés sans dessécher l'épiderme.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 20 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500" alt="Crème hydratante visage"></div>
+        <div class="product-body">
+          <small class="category">Hydratation visage</small>
+          <h4>Crème Hydratante Visage</h4>
+          <p class="description">Hydratation 24h pour une peau souple et éclatante.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">10 € – 30 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge pro">Premium</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500" alt="Sérum visage"></div>
+        <div class="product-body">
+          <small class="category">Soin ciblé</small>
+          <h4>Sérum Visage</h4>
+          <p class="description">Concentré actif anti-âge ou éclat selon vos besoins.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">15 € – 40 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=500" alt="Masque visage"></div>
+        <div class="product-body">
+          <small class="category">Soin express</small>
+          <h4>Masque Visage</h4>
+          <p class="description">Coup d'éclat ou purification en 10 minutes.</p>
+          <div class="stars">★★★★☆</div>
+          <div class="product-price"><span class="range">5 € – 15 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Démaquillant"></div>
+        <div class="product-body">
+          <small class="category">Nettoyage</small>
+          <h4>Démaquillant</h4>
+          <p class="description">Eau micellaire ou huile, respecte les yeux sensibles.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">6 € – 15 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge new">Nouveau</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1532947978637-0c12ac3a4e20?w=500" alt="Écran solaire"></div>
+        <div class="product-body">
+          <small class="category">Protection</small>
+          <h4>Écran Solaire Visage</h4>
+          <p class="description">SPF 50+, texture invisible, anti-taches.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">10 € – 25 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <span class="product-badge bio">Naturel</span>
+        <div class="product-img"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500" alt="Huile corporelle"></div>
+        <div class="product-body">
+          <small class="category">Nutrition corps</small>
+          <h4>Huile Corporelle</h4>
+          <p class="description">Sublime la peau et prévient les vergetures.</p>
+          <div class="stars">★★★★★</div>
+          <div class="product-price"><span class="range">8 € – 20 €</span></div>
+          <span class="product-availability"><i class="fas fa-map-marker-alt"></i>Disponible en salon</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -386,7 +666,7 @@
     <div class="booking-grid">
       <div class="booking-info reveal">
         <h3>Venez nous rencontrer</h3>
-        <p>Réservez votre moment de bien-être. Notre équipe vous accueille du mardi au samedi dans un cadre chaleureux.</p>
+        <p>Réservez votre moment de bien-être ou passez découvrir les produits <strong>LariShop's</strong> directement en salon !</p>
         <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h5>Adresse</h5><p>24 rue de la Beauté, 75008 Paris</p></div></div>
         <div class="info-item"><i class="fas fa-phone"></i><div><h5>Téléphone</h5><p>+33 1 23 45 67 89</p></div></div>
         <div class="info-item"><i class="fas fa-envelope"></i><div><h5>Email</h5><p>contact@larissalaporte.fr</p></div></div>
@@ -404,13 +684,13 @@
         <div class="form-group">
           <label>Service souhaité</label>
           <select required>
-            <option value="">-- Choisir un service --</option>
+            <option value="">-- Choisir --</option>
             <option>Soin visage</option>
             <option>Soin cheveux</option>
             <option>Coiffure</option>
             <option>Massage</option>
             <option>Esthétique</option>
-            <option>Achat produits</option>
+            <option>Renseignement LariShop's</option>
           </select>
         </div>
         <div class="form-row">
@@ -429,7 +709,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <div class="logo" style="color:white;margin-bottom:20px">Larissa <span>Laporte</span></div>
-        <p>Votre salon de beauté haut de gamme au cœur de Paris. L'excellence au service de votre beauté depuis 2011.</p>
+        <p>Votre salon de beauté haut de gamme au cœur de Paris. Découvrez aussi <strong>LariShop's</strong>, notre boutique exclusive de produits professionnels.</p>
         <div class="social">
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -444,7 +724,7 @@
           <li><a href="#about">À propos</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#tarifs">Tarifs</a></li>
-          <li><a href="#produits-cosmetiques">Boutique</a></li>
+          <li><a href="#larishop">LariShop's</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -467,7 +747,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      © 2026 Larissa Laporte — Tous droits réservés | Conçu avec <i class="fas fa-heart" style="color:var(--or)"></i>
+      © 2026 Larissa Laporte — LariShop's — Tous droits réservés | Conçu avec <i class="fas fa-heart" style="color:var(--or)"></i>
     </div>
   </div>
 </footer>
@@ -491,18 +771,9 @@
     a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
   });
 
-  document.querySelectorAll('.btn-cart').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const original = btn.textContent;
-      btn.textContent = '✓ Ajouté !';
-      btn.style.background = 'var(--or)';
-      setTimeout(()=>{btn.textContent = original; btn.style.background = '';},1500);
-    });
-  });
-
   function handleSubmit(e){
     e.preventDefault();
-    alert('✨ Merci ! Votre demande de rendez-vous a bien été envoyée.\nLarissa vous recontactera sous 24h.');
+    alert('✨ Merci ! Votre demande a bien été envoyée.\nLarissa vous recontactera sous 24h.');
     e.target.reset();
   }
 
